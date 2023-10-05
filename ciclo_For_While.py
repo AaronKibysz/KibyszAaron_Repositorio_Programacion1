@@ -34,15 +34,16 @@ while x < 0 or x>0:
     elif number_element < 0:
         continue
     else:
-        number_list.append(number_element)
+        number_list.append(str(number_element))
 
 even = 0
 not_even = 0;
 for element in range(len(number_list)):
-    if number_list[element] %2 == 0:
-        even += 1
-    else:
-        not_even += 1
+    for number_digit in number_list[element]:
+        if int(number_digit)%2 == 0:
+            even += 1
+        else:
+            not_even += 1
 
 print('Se han ingresado : ', even, 'Numeros Pares')
 print('Se han ingresado : ', not_even, 'Numeros Impares')
