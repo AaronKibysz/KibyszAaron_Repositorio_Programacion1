@@ -28,13 +28,21 @@ number_list = []
 print('Ingrese numeros enteros positivos o 0 para finalizar')
 x = -1
 while x < 0 or x>0:
-    number_element = int(input())
+    number_element = int(input('Ingrese un numero: '))
     if number_element == 0:
         break
     elif number_element < 0:
         continue
     else:
         number_list.append(str(number_element))
+        for number_digit in str(number_element):
+            even2 = 0
+            not_even2 = 0
+            if int(number_digit)%2 ==0:
+                even2 += 1
+            else:
+                not_even2 += 1
+            print('El numero ', number_element, ' Tiene ', even2, 'Cifras Pares y ', not_even2, ' Cifras Inpares')
 
 even = 0
 not_even = 0;
@@ -44,11 +52,8 @@ for element in range(len(number_list)):
     for number_digit in number_list[element]:
         if int(number_digit)%2 == 0:
             even += 1
-            even2 += 1
         else:
             not_even += 1
-            not_even2 += 1
-    print('El numero ingresado', number_list[element], ' Tiene ', even2, " Cifras Pares y ", not_even2, ' Cifras Impares')
 
 print('Se han ingresado : ', even, 'Cifras Pares en Total')
 print('Se han ingresado : ', not_even, 'Cifras Impares en Total')
