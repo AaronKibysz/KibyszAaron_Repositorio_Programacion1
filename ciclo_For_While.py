@@ -39,11 +39,16 @@ while x < 0 or x>0:
 even = 0
 not_even = 0;
 for element in range(len(number_list)):
+    even2 = 0
+    not_even2 = 0
     for number_digit in number_list[element]:
         if int(number_digit)%2 == 0:
             even += 1
+            even2 += 1
         else:
             not_even += 1
+            not_even2 += 1
+    print('El numero ingresado', number_list[element], ' Tiene ', even2, " Cifras Pares y ", not_even2, ' Cifras Impares')
 
-print('Se han ingresado : ', even, 'Numeros Pares')
-print('Se han ingresado : ', not_even, 'Numeros Impares')
+print('Se han ingresado : ', even, 'Cifras Pares en Total')
+print('Se han ingresado : ', not_even, 'Cifras Impares en Total')
