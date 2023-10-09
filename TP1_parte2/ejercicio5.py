@@ -1,0 +1,13 @@
+# EJERCICIO 5
+# a)
+nombre = input('Cual es su nombre?')
+a = input('Cual es tu cancion favorita?')
+# b)
+precio = float(input('Precio: '))
+total = precio + (precio * 0.1)
+# c)
+edad = int(input("Edad: "))
+print('tu edad es: ', edad)
+# d)
+edad = int(input('Edad: '))
+print('Veamos si tu edad es de 18...', edad ==18)
