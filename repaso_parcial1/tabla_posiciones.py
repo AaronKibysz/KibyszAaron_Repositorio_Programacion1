@@ -70,10 +70,3 @@ print('')
 list_teams = list(dict_teams.keys())
 for i in range(min(amount_qualy, len(list_teams))):
     print(f'Equipo clasificado {i+1}: {list_teams[i]}')
-
-
-
-
-
-
-
