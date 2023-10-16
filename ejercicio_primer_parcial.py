@@ -41,6 +41,6 @@ elif option == 'P':
         if letter in vocals_tupple:
             vocals_count[letter] += 1
     
-    print(f'En la frase que ha ingresado {name}, se han contados estas volcales: ')
-    for letter, count in vocals_count.items():
+    print(f'En la frase que ha ingresado {name}, se han contados estas volcales: ') 
+    for letter, count in vocals_count.items(): # Imprime todas las claves y sus valores
         print(f'{letter}: {count}')
