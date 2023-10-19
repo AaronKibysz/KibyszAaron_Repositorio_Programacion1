@@ -12,7 +12,7 @@ hidden_word = []
 for i in range(len(word_choice)):
     hidden_word.append('_')
 hiddent_word = ''
-
+input_letters = []
 while tries<=6:
 
     if hiddent_word == word_choice:
@@ -34,13 +34,18 @@ while tries<=6:
             print('Ingrese una sola letra')
             for i in hidden_word:
                 print(i, end='')
-    if letter in word_choice:
-        hidden_word = compare_letter(word_choice, hidden_word, letter)
-        print('Acertaste la letra!!')
-        for i in hidden_word:
-            hiddent_word += i
+    
+    if letter in input_letters:
+        print(f'Usted ya ha ingresado la letra "{letter}"')
         continue
     else:
-        tries += 1
-        print(f'Letra Incorrecta, quedan {6-tries} intentos')
-
+        input_letters.append(letter)
+        if letter in word_choice:
+            hidden_word = compare_letter(word_choice, hidden_word, letter)
+            print('Acertaste la letra!!')
+            for i in hidden_word:
+                hiddent_word += i
+            continue
+        else:
+            tries += 1
+            print(f'Letra Incorrecta, quedan {6-tries} intentos')
